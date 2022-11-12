@@ -1,0 +1,15 @@
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\Binary-Search.exe
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\Binary-Search.deps.json
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\Binary-Search.runtimeconfig.json
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\Binary-Search.dll
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\ref\Binary-Search.dll
+C:\source\Algorithms\C#\Binary-Search\bin\Debug\net6.0\Binary-Search.pdb
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.csproj.AssemblyReference.cache
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.GeneratedMSBuildEditorConfig.editorconfig
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.AssemblyInfoInputs.cache
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.AssemblyInfo.cs
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.csproj.CoreCompileInputs.cache
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.dll
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\ref\Binary-Search.dll
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.pdb
+C:\source\Algorithms\C#\Binary-Search\obj\Debug\net6.0\Binary-Search.genruntimeconfig.cache
