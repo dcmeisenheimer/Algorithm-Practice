@@ -55,14 +55,14 @@ void BinarySearch(int target, int [] arrayNum)
     {
         //Guess equals the average of max and min
         guess = (max + min) / 2;
-        System.Console.WriteLine("\nGuess Number:" + arrayNum[guess] + " Guess Index: " + guess);
-        System.Console.WriteLine("Min Array Guess: " + arrayNum[min] + " Min Array Number: " + min);
+        System.Console.WriteLine("\nMin Array Guess: " + arrayNum[min] + " Min Array Number: " + min);
         System.Console.WriteLine("Max Array Guess: " + arrayNum[max] + " Max Array Number: " + max);
-
+        System.Console.WriteLine("Guess Number:" + arrayNum[guess] + " Guess Index: " + guess);
+        
         //Checks if guess value equals target
         if(arrayNum[guess] == target)
         {
-            System.Console.WriteLine("The guess: " + arrayNum[guess] + " The Target: " + target);
+            System.Console.WriteLine("\nThe guess: " + arrayNum[guess] + " The Target: " + target);
             break;
         }
         //Checks if guess value is less than target
