@@ -1,0 +1,55 @@
+body {
+    overflow-x: hidden;
+    background-color: rgb(20, 20, 20);
+}
+
+#menu-background-pattern {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 9%, 
+      transparent 9%
+    );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, 
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100vw;
+    z-index: 1;
+}
+  
+.container {
+    text-align: center;
+}
+
+.intro {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 38px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#id {
+    font-size: 16px;
+    color: black;
+}
+
+ul {
+    overflow-x: hidden;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+li {
+    display: inline-block;
+    padding: 10px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 18px 2px 0;
+    border-radius: 10px;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+}
