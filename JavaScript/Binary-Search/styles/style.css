@@ -1,3 +1,9 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     overflow-x: hidden;
     background-color: rgb(20, 20, 20);
@@ -18,7 +24,7 @@ body {
       background-size 800ms ease,
       background-position 800ms ease;
     width: 100vw;
-    z-index: 1;
+    z-index: -1;
 }
   
 .container {
@@ -38,18 +44,58 @@ body {
     color: black;
 }
 
-ul {
+#arrayBoxes {
     overflow-x: hidden;
-    list-style: none;
     width: 100%;
     text-align: center;
+    position: relative;
 }
-li {
+.block {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 5px 10px;
     border: 1px solid rgb(255, 255, 255);
     margin: 18px 2px 0;
     border-radius: 10px;
     color: white;
     box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+    bottom: 0px;
+    transition: 0.2s all ease;
+}
+
+.block_id {
+    color: rgb(255, 255, 255);
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 25px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#text {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 25px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.input {
+    position: relative;
+}
+
+button {
+    color: white;
+    background: var(--color-accent);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 10px;
+    
 }

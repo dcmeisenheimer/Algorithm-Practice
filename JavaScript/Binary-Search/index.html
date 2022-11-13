@@ -10,8 +10,26 @@
 </head>
 <body>
     <div class="container">
+        <div class="intro">Binary Search</div>
+        <!-- Header Name is printed in Content -->
         <div class="content"></div>
-        <ul id="arrayBoxes"></ul>
+        <!-- ul to print all array numbers in boxes -->
+        <div id="arrayBoxes"></div>
+        <br /><br />
+        <!-- Label for search box -->
+        <div style="text-align: center">
+            <label for="fname">
+              Number to be Searched:
+            </label>
+            <br/>
+            <input type="text" id="fname" name="fname"/>
+            <br /><br />
+            <button id="btn"
+                    onclick="BinarySearch()">Search</button>
+            <br />
+            <br />
+            <div id="text"></div>
+        </div>
     </div>
     <div id="menu-background-pattern"></div>
     <script src="./scripts/index.js"></script>

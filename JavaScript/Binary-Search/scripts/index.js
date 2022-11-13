@@ -8,70 +8,104 @@
 6. Go back to step 2
  */
 //Selects the container class div
-const container = document.querySelector('.container');
+var container = document.getElementById('arrayBoxes');
 
-//Selects the content div
-const content = document.querySelector('.content');
-
-//Creating a new class for title of webpage
-content.classList.add('intro');
-
-//assiging text value to intro class
-content.textContent = 'Binary Search';
 
 //Determine how many random numbers can be stored in array
 const count = 49;
 
 //Determine the length of the area as the value in count (50).
-let arrayNum = [count];
+var arrayNum = [count];
 
 //A Loop to iteratate every time till i = count;
 for(let i = 0; i < count; i++)
 {
-
-    arrayNum[i] = Math.floor(Math.random() * 1000) + 1;
+    var val = Number(Math.ceil(Math.random() * 1000));
+    arrayNum.push(val);
 }
-
-//target value to guess will be a random number within array index and stores the value of that index.
-const target = arrayNum[Math.floor(Math.random() * arrayNum.length)];
 
 //Sorting the existing array from small to large
-arrayNum = arrayNum.sort(function(a,b){return a-b});
-
-//boxes for each array value
-const arrayBoxes = document.getElementById("arrayBoxes");
-
-//creating a list item for each value in the sorted array
-arrayNum.forEach((item) => {
-    let li = document.createElement("li");
-    li.innerText = item;
-    arrayBoxes.appendChild(li);
+arrayNum.sort(function(a,b) {
+    return a-b
 });
+//target value to guess will be a random number within array index and stores the value of that index.
+//const target = arrayNum[Math.floor(Math.random() * arrayNum.length)];
 
-let min = 0;
+for (var i = 0; i < count; i++)
+{
+    var value = arrayNum[i];
+    var array_ele = document.createElement('div');
+    array_ele.classList.add('block');
 
-let max = arrayNum.length -1;
+    var array_ele_label = document.createElement("label");
+    array_ele_label.classList.add("block_id");
+    array_ele_label.innerText = value;
 
-
-while(min <= max){
-    let guess = Math.floor((max + min) / 2);
-
-    console.log('\nMin Array Guess: ' + arrayNum[min] + ' Min Array Number: ' + min);
-    console.log('Min Array Guess: ' + arrayNum[max] + ' Min Array Number: ' + max);
-    console.log('Guess Number:' + arrayNum[guess] + ' Guess Index: ' + guess);
-
-    if (arrayNum[guess] == target) {
-        console.log('\nThe guess: ' + arrayNum[guess] + ' The Target: ' + target)
-        break;
-    }
-
-    else if (arrayNum[guess] < target) {
-        console.log('\nThe target is more than ' + arrayNum[guess]);
-        min = guess + 1;
-    }
-
-    else {
-        console.log('\nThe target is less than ' + arrayNum[guess]);
-        max = guess -1;
-    }
+    // Appending created elements to index.html
+    array_ele.appendChild(array_ele_label);
+    container.appendChild(array_ele);
 }
+
+
+var array_ele = document.createElement('div');
+array_ele.classList.add('block');
+
+var array_ele_label = document.createElement("label");
+array_ele_label.classList.add("block_id");
+array_ele_label.innerText = value;
+
+// Appending created elements to index.html
+array_ele.appendChild(array_ele_label);
+container.appendChild(array_ele);
+
+//Binary Search Method
+async function BinarySearch(delay = 300) {
+    var blocks = document.querySelectorAll('.block');
+    var output = document.getElementById('text');
+
+    var num = document.getElementById("fname").value;
+
+    output.innerText = "";
+
+    var min = 0;
+    var max = arrayNum.length -1;
+    var flag = 0; 
+
+    while(min <= max){
+
+        var guess = Math.floor((max + min) / 2);
+        blocks[guess].style.backgroundColor = "#800000";
+
+        var value = Number(blocks[guess].childNodes[0].innerHTML);
+        // To wait for .1 sec
+        await new Promise((resolve) =>
+            setTimeout(() => {
+            resolve();
+            }, delay)
+        );
+    
+        if (value == num) {
+            output.innerText = "Element Found";
+            blocks[guess].style.backgroundColor ="#73A580";
+            flag = 1;
+            break;
+        }
+    
+        if (value < num) {
+            min = guess + 1;
+            blocks[guess].style.backgroundColor = "#3E363F";
+        }
+    
+        else {
+            max = guess -1;
+            blocks[guess].style.backgroundColor = "#3E363F";
+        }
+    }
+
+    if (flag === 0) {
+        output.innerText = "Element Not Found";
+    }
+    
+}
+
+//Calling generateArray Function
